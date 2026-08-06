@@ -1,0 +1,12 @@
+{
+  "name": "petroquest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PWA gamificada para estudos de Engenharia de Equipamentos - Elétrica.",
+  "scripts": {
+    "check": "node scripts/check-project.mjs && node --check src/config.js && node --check src/store.js && node --check src/review.js && node --check src/questions.js && node --check src/gamification.js && node --check src/cloud.js && node --check src/quiz.js && node --check src/ui.js && node --check src/main.js && node --check service-worker.js",
+    "serve": "python3 -m http.server 8080"
+  },
+  "engines": { "node": ">=20" }
+}
