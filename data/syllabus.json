@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "notice": "Mapa provisório. A redação e os pesos serão substituídos pelos editais e provas oficiais auditados.",
+  "tracks": [
+    {
+      "id": "petrobras-eletrica",
+      "name": "Petrobras — Equipamentos Elétrica",
+      "status": "aguardando edital auditado",
+      "description": "Trilha reservada ao conteúdo oficialmente exigido para Engenharia de Equipamentos — Elétrica.",
+      "topics": []
+    },
+    {
+      "id": "br-distribuidora-historico",
+      "name": "BR Distribuidora — histórico",
+      "status": "aguardando provas auditadas",
+      "description": "Questões históricas serão separadas por ano, banca e aderência ao cargo.",
+      "topics": []
+    },
+    {
+      "id": "base-comum",
+      "name": "Base comum",
+      "status": "aguardando consolidação",
+      "description": "Conteúdos comuns serão incluídos somente após comparação documental entre os certames.",
+      "topics": []
+    }
+  ]
+}
