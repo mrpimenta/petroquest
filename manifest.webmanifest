@@ -1,0 +1,10 @@
+{
+  "name": "Petro Quest",
+  "short_name": "PetroQuest",
+  "description": "Estudos gamificados para Engenharia de Equipamentos - Elétrica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f6f2",
+  "theme_color": "#103f35",
+  "lang": "pt-BR"
+}
