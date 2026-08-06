@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#103f35">
+  <meta name="description" content="Petro Quest: preparação gamificada para Engenharia de Equipamentos - Elétrica.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Petro Quest</title>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Engenharia de Equipamentos · Elétrica</p>
+      <h1>Petro Quest</h1>
+    </div>
+    <button id="offline-status" class="status" type="button" aria-live="polite">verificando conexão</button>
+  </header>
+
+  <main id="app" class="shell" aria-live="polite">
+    <section class="hero card">
+      <div>
+        <span class="pill">Petrobras + histórico BR Distribuidora</span>
+        <h2>Estudo técnico com rastreabilidade</h2>
+        <p>Questões, explicações e trilhas só entram no banco depois de conferência da fonte.</p>
+      </div>
+      <button id="start-session" class="primary" type="button">Iniciar sessão</button>
+    </section>
+
+    <section id="stats" class="stats" aria-label="Resumo do progresso"></section>
+
+    <nav class="tabs" aria-label="Áreas do aplicativo">
+      <button class="tab active" data-view="dashboard" type="button">Painel</button>
+      <button class="tab" data-view="quiz" type="button">Questões</button>
+      <button class="tab" data-view="review" type="button">Revisão</button>
+      <button class="tab" data-view="syllabus" type="button">Conteúdo</button>
+    </nav>
+
+    <section id="view" class="card view"></section>
+  </main>
+
+  <noscript>Ative o JavaScript para usar o Petro Quest.</noscript>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
