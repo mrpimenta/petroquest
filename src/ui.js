@@ -21,9 +21,16 @@ export function renderStats() {
 }
 
 export async function renderDashboard() {
-  const questions = await loadQuestions();
+  const [questions, targetResponse] = await Promise.all([
+    loadQuestions(),
+    fetch('/data/target.json')
+  ]);
+  const target = targetResponse.ok ? await targetResponse.json() : null;
+  const targetCard = target ? `
+      <li class="topic"><header><strong>${target.company} · ${target.process}</strong><span class="badge">alvo principal</span></header><p><strong>${target.emphasis}</strong> · ${target.level}</p><p>${target.targetPole}</p><small>${target.status}</small></li>` : '';
   viewEl.innerHTML = `<div class="toolbar"><div><h2>Painel de estudos</h2><p>${questions.length} questões auditadas disponíveis.</p></div></div>
     <ul class="topic-list">
+      ${targetCard}
       <li class="topic"><header><strong>Questões verificadas</strong><span class="badge">fonte obrigatória</span></header><p>O banco inicial está vazio de propósito. PDFs e provas serão importados após auditoria.</p></li>
       <li class="topic"><header><strong>Revisão espaçada</strong><span>1 · 3 · 7 · 14 · 30 dias</span></header><p>Erros e “Ainda não sei” retornam automaticamente.</p></li>
       <li class="topic"><header><strong>Modo offline</strong><span>ativo</span></header><p>O progresso fica no aparelho e entra na fila de sincronização.</p></li>
