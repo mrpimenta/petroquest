@@ -1,26 +1,41 @@
 {
-  "schemaVersion": 1,
-  "notice": "Mapa provisório. A redação e os pesos serão substituídos pelos editais e provas oficiais auditados.",
+  "schemaVersion": 2,
+  "notice": "A trilha Transpetro 2026 é o alvo principal. Até a auditoria do edital completo, os tópicos abaixo servem como mapa histórico de preparação e não como reprodução definitiva do conteúdo programático de 2026.",
   "tracks": [
+    {
+      "id": "transpetro-2026-eletrica",
+      "name": "Transpetro 2026 — Engenharia Elétrica",
+      "status": "alvo principal · edital em auditoria",
+      "description": "Trilha prioritária do PSP Transpetro 004/2026 — Nível Superior. Programa, pesos, polo e regras serão marcados como definitivos somente após conferência dos documentos oficiais do certame.",
+      "topics": []
+    },
+    {
+      "id": "transpetro-2023-eletrica",
+      "name": "Transpetro 2023 — Engenharia Elétrica",
+      "status": "base histórica",
+      "description": "Mapa histórico da Ênfase 22 do PSP 002/2023, usado para orientar revisão pré-edital e análise de incidência. Não substitui o programa de 2026.",
+      "topics": [
+        "Matemática aplicada à Engenharia Elétrica",
+        "Teoria e técnica de circuitos elétricos",
+        "Sistemas elétricos de potência",
+        "Instalações elétricas de baixa, média e alta tensão e subestações",
+        "Máquinas elétricas",
+        "Sistemas de controle",
+        "Legislação aplicada à engenharia elétrica e segurança em eletricidade"
+      ]
+    },
     {
       "id": "petrobras-eletrica",
       "name": "Petrobras — Equipamentos Elétrica",
-      "status": "aguardando edital auditado",
-      "description": "Trilha reservada ao conteúdo oficialmente exigido para Engenharia de Equipamentos — Elétrica.",
+      "status": "trilha secundária",
+      "description": "Conteúdo reaproveitável para futura seleção da Petrobras, mantido separado para não misturar exigências de editais diferentes.",
       "topics": []
     },
     {
       "id": "br-distribuidora-historico",
       "name": "BR Distribuidora — histórico",
-      "status": "aguardando provas auditadas",
-      "description": "Questões históricas serão separadas por ano, banca e aderência ao cargo.",
-      "topics": []
-    },
-    {
-      "id": "base-comum",
-      "name": "Base comum",
-      "status": "aguardando consolidação",
-      "description": "Conteúdos comuns serão incluídos somente após comparação documental entre os certames.",
+      "status": "arquivo histórico",
+      "description": "Questões antigas permanecem apenas como material complementar quando tecnicamente aderentes. A antiga BR Distribuidora não é mais o alvo do projeto.",
       "topics": []
     }
   ]
