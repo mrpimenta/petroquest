@@ -20,13 +20,33 @@ let observer;
 let bubbleTimer;
 
 function currentContext() {
-  const card = document.querySelector('.question-card[data-question-id]');
+  const card = document.querySelector('.question-card');
   if (!card) return { currentScreen: 'home', questionId: null, selectedOption: null };
-  const selected = Number(card.dataset.selectedIndex);
+
+  let questionId = card.dataset.questionId || null;
+  if (!questionId) {
+    const numberText = card.querySelector('.question-kicker span')?.textContent || '';
+    const number = Number(numberText.match(/\d+/)?.[0]);
+    const examLabel = document.querySelector('.study-sidebar h3')?.textContent?.trim() || '';
+    if (Number.isInteger(number) && number > 0) {
+      if (/Prova\s*1/i.test(examLabel)) questionId = `tp2023-q${number}`;
+      else if (/Prova\s*2/i.test(examLabel)) questionId = `tp2018-q${number}`;
+    }
+  }
+
+  let selectedOption = null;
+  const feedbackText = card.querySelector('.feedback')?.textContent || '';
+  const wrong = card.querySelector('.answer.wrong');
+  if (wrong) selectedOption = Number(wrong.dataset.answer);
+  else if (feedbackText.includes('Correto.')) {
+    const correct = card.querySelector('.answer.correct');
+    if (correct) selectedOption = Number(correct.dataset.answer);
+  }
+
   return {
     currentScreen: 'question',
-    questionId: card.dataset.questionId || null,
-    selectedOption: Number.isInteger(selected) && selected >= 0 ? selected : null
+    questionId,
+    selectedOption: Number.isInteger(selectedOption) && selectedOption >= 0 ? selectedOption : null
   };
 }
 
