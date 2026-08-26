@@ -11,12 +11,19 @@
       "date": "09/12/2023",
       "questionCount": 70,
       "sourceUrl": "https://www.qconcursos.com/questoes-de-concursos/provas/cesgranrio-2023-transpetro-profissional-transpetro-de-nivel-superior-junior-enfase-22-engenharia-eletrica",
+      "sourceStatus": "Caderno completo importado e gabarito final conferido",
       "subjects": [
-        { "name": "Português", "count": 10 },
-        { "name": "Inglês", "count": 10 },
-        { "name": "Engenharia Elétrica", "count": 46 },
-        { "name": "Física", "count": null },
-        { "name": "Direito Administrativo", "count": null }
+        {"name":"Português","count":10},
+        {"name":"Inglês","count":10},
+        {"name":"Linhas e Instalações Elétricas","count":7},
+        {"name":"Máquinas Elétricas","count":8},
+        {"name":"Proteção e Sistemas Elétricos de Potência","count":11},
+        {"name":"Circuitos e Medidas Elétricas","count":9},
+        {"name":"Controle e Sinais","count":9},
+        {"name":"Física e Matemática","count":3},
+        {"name":"NR-10","count":1},
+        {"name":"Licitações","count":1},
+        {"name":"Eletrônica","count":1}
       ]
     },
     {
@@ -29,13 +36,14 @@
       "date": "15/04/2018",
       "questionCount": 70,
       "sourceUrl": "https://www.qconcursos.com/questoes-de-concursos/provas/cesgranrio-2018-transpetro-engenheiro-junior-eletrica",
+      "sourceStatus": "Aguardando caderno fornecido pelo usuário",
       "subjects": [
-        { "name": "Português", "count": 10 },
-        { "name": "Inglês", "count": 10 },
-        { "name": "Engenharia Elétrica", "count": 28 },
-        { "name": "Engenharia Eletrônica", "count": 19 },
-        { "name": "Matemática", "count": 2 },
-        { "name": "Engenharia Mecânica", "count": 1 }
+        {"name":"Português","count":10},
+        {"name":"Inglês","count":10},
+        {"name":"Engenharia Elétrica","count":28},
+        {"name":"Engenharia Eletrônica","count":19},
+        {"name":"Matemática","count":2},
+        {"name":"Engenharia Mecânica","count":1}
       ]
     }
   ]
