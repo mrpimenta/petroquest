@@ -179,8 +179,10 @@ export default async (req: Request) => {
   const mode = MODES.has(body?.mode) ? body.mode : 'explain';
   const currentScreen = SCREENS.has(body?.currentScreen) ? body.currentScreen : 'home';
   const questionId = body?.questionId == null ? null : normalizeText(String(body.questionId), 160);
-  const selectedOption = Number.isInteger(Number(body?.selectedOption)) && Number(body.selectedOption) >= 0 && Number(body.selectedOption) <= 4
-    ? Number(body.selectedOption)
+  const hasSelectedOption = body?.selectedOption !== null && body?.selectedOption !== undefined && body?.selectedOption !== '';
+  const selectedNumber = hasSelectedOption ? Number(body.selectedOption) : NaN;
+  const selectedOption = Number.isInteger(selectedNumber) && selectedNumber >= 0 && selectedNumber <= 4
+    ? selectedNumber
     : null;
   const history = normalizeHistory(body?.history);
 
