@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "exams": [
+    {
+      "id": "transpetro-2023-eletrica",
+      "order": 1,
+      "label": "Prova 1",
+      "title": "Transpetro 2023 · Engenharia Elétrica",
+      "subtitle": "Profissional Transpetro de Nível Superior Júnior · Ênfase 22",
+      "board": "CESGRANRIO",
+      "date": "09/12/2023",
+      "questionCount": 70,
+      "sourceUrl": "https://www.qconcursos.com/questoes-de-concursos/provas/cesgranrio-2023-transpetro-profissional-transpetro-de-nivel-superior-junior-enfase-22-engenharia-eletrica",
+      "subjects": [
+        { "name": "Português", "count": 10 },
+        { "name": "Inglês", "count": 10 },
+        { "name": "Engenharia Elétrica", "count": 46 },
+        { "name": "Física", "count": null },
+        { "name": "Direito Administrativo", "count": null }
+      ]
+    },
+    {
+      "id": "transpetro-2018-eletrica",
+      "order": 2,
+      "label": "Prova 2",
+      "title": "Transpetro 2018 · Engenheiro Júnior · Elétrica",
+      "subtitle": "Engenheiro Júnior · Área Elétrica",
+      "board": "CESGRANRIO",
+      "date": "15/04/2018",
+      "questionCount": 70,
+      "sourceUrl": "https://www.qconcursos.com/questoes-de-concursos/provas/cesgranrio-2018-transpetro-engenheiro-junior-eletrica",
+      "subjects": [
+        { "name": "Português", "count": 10 },
+        { "name": "Inglês", "count": 10 },
+        { "name": "Engenharia Elétrica", "count": 28 },
+        { "name": "Engenharia Eletrônica", "count": 19 },
+        { "name": "Matemática", "count": 2 },
+        { "name": "Engenharia Mecânica", "count": 1 }
+      ]
+    }
+  ]
+}
