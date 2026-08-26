@@ -1,6 +1,7 @@
 import { renderDashboard, renderStats, bindNavigation } from './ui.js';
 import { subscribe } from './store.js';
 import { flushSyncQueue } from './cloud.js';
+import { initAnninha } from './anninha-pet.js';
 
 const status = document.querySelector('#offline-status');
 function updateConnection() {
@@ -19,6 +20,7 @@ if ('serviceWorker' in navigator) {
 updateConnection();
 bindNavigation();
 renderStats();
+initAnninha();
 renderDashboard().catch(error => {
   document.querySelector('#view').innerHTML = `<div class="empty"><p>${error.message}</p></div>`;
 });
