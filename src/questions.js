@@ -1,12 +1,22 @@
 let questionCache = null;
 let examCache = null;
+let passageCache = null;
 
 export async function loadQuestions({ verifiedOnly = true } = {}) {
   if (!questionCache) {
     const response = await fetch('/data/questions.json');
     if (!response.ok) throw new Error('Não foi possível carregar o banco de questões.');
-    const data = await response.json();
-    questionCache = data.questions ?? [];
+    const manifest = await response.json();
+    if (Array.isArray(manifest.files) && manifest.files.length) {
+      const docs = await Promise.all(manifest.files.map(async path => {
+        const part = await fetch(path);
+        if (!part.ok) throw new Error(`Não foi possível carregar ${path}.`);
+        return part.json();
+      }));
+      questionCache = docs.flatMap(doc => doc.questions ?? []);
+    } else {
+      questionCache = manifest.questions ?? [];
+    }
   }
   return verifiedOnly ? questionCache.filter(question => question.audit?.verified === true) : questionCache;
 }
@@ -20,6 +30,15 @@ export async function loadExamCatalog() {
   return examCache;
 }
 
+export async function loadPassages() {
+  if (passageCache) return passageCache;
+  const response = await fetch('/data/passages.json');
+  if (!response.ok) return [];
+  const data = await response.json();
+  passageCache = data.passages ?? [];
+  return passageCache;
+}
+
 export function filterQuestions(questions, filters = {}) {
   return questions.filter(question => {
     if (filters.examId && question.examId !== filters.examId) return false;
@@ -30,7 +49,7 @@ export function filterQuestions(questions, filters = {}) {
 }
 
 export function pickQuestions(questions, count = 5) {
-  if (!Number.isFinite(count) || count >= questions.length) return [...questions];
+  if (!Number.isFinite(count) || count >= questions.length) return [...questions].sort((a, b) => (a.number ?? 0) - (b.number ?? 0));
   return [...questions].sort(() => Math.random() - 0.5).slice(0, count);
 }
 
