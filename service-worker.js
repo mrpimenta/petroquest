@@ -1,5 +1,5 @@
-const CACHE = 'petro-quest-v1';
-const ASSETS = ['/', '/index.html', '/styles.css', '/manifest.webmanifest', '/src/main.js', '/src/config.js', '/src/store.js', '/src/review.js', '/src/questions.js', '/src/gamification.js', '/src/cloud.js', '/src/quiz.js', '/src/ui.js', '/data/questions.json', '/data/syllabus.json'];
+const CACHE = 'petro-quest-v2';
+const ASSETS = ['/', '/index.html', '/styles.css', '/manifest.webmanifest', '/src/main.js', '/src/config.js', '/src/store.js', '/src/review.js', '/src/questions.js', '/src/gamification.js', '/src/cloud.js', '/src/quiz.js', '/src/ui.js', '/data/questions.json', '/data/exams.json', '/data/syllabus.json'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));
 self.addEventListener('fetch', event => {
