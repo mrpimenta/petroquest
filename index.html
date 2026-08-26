@@ -3,41 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#103f35">
-  <meta name="description" content="Petro Quest: preparação gamificada para Engenharia de Equipamentos - Elétrica.">
+  <meta name="theme-color" content="#0d4b3e">
+  <meta name="description" content="Petro Quest: simulados comentados de Engenharia Elétrica para provas Transpetro/Cesgranrio.">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="stylesheet" href="/styles.css">
   <title>Petro Quest</title>
 </head>
 <body>
   <header class="topbar">
-    <div>
-      <p class="eyebrow">Engenharia de Equipamentos · Elétrica</p>
-      <h1>Petro Quest</h1>
+    <button class="brand" type="button" data-view="dashboard" aria-label="Voltar ao início">
+      <span class="brand-mark" aria-hidden="true">PQ</span>
+      <span><strong>Petro Quest</strong><small>Engenharia Elétrica · Cesgranrio</small></span>
+    </button>
+    <div class="top-actions">
+      <span id="offline-status" class="status" aria-live="polite">verificando conexão</span>
     </div>
-    <button id="offline-status" class="status" type="button" aria-live="polite">verificando conexão</button>
   </header>
 
-  <main id="app" class="shell" aria-live="polite">
-    <section class="hero card">
+  <main id="app" class="shell">
+    <section class="intro">
       <div>
-        <span class="pill">Petrobras + histórico BR Distribuidora</span>
-        <h2>Estudo técnico com rastreabilidade</h2>
-        <p>Questões, explicações e trilhas só entram no banco depois de conferência da fonte.</p>
+        <h1>Aprenda resolvendo as provas.</h1>
+        <p>Prova por prova, matéria por matéria, com revisão dos erros e resolução comentada.</p>
       </div>
-      <button id="start-session" class="primary" type="button">Iniciar sessão</button>
+      <button id="start-session" class="primary compact" type="button">Continuar estudo</button>
     </section>
 
     <section id="stats" class="stats" aria-label="Resumo do progresso"></section>
 
     <nav class="tabs" aria-label="Áreas do aplicativo">
-      <button class="tab active" data-view="dashboard" type="button">Painel</button>
-      <button class="tab" data-view="quiz" type="button">Questões</button>
+      <button class="tab active" data-view="dashboard" type="button">Provas</button>
+      <button class="tab" data-view="quiz" type="button">Simulado</button>
       <button class="tab" data-view="review" type="button">Revisão</button>
-      <button class="tab" data-view="syllabus" type="button">Conteúdo</button>
+      <button class="tab" data-view="syllabus" type="button">Matérias</button>
     </nav>
 
-    <section id="view" class="card view"></section>
+    <section id="view" class="view" aria-live="polite"></section>
   </main>
 
   <noscript>Ative o JavaScript para usar o Petro Quest.</noscript>
