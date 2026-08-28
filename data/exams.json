@@ -36,14 +36,17 @@
       "date": "15/04/2018",
       "questionCount": 70,
       "sourceUrl": "https://www.qconcursos.com/questoes-de-concursos/provas/cesgranrio-2018-transpetro-engenheiro-junior-eletrica",
-      "sourceStatus": "Aguardando caderno fornecido pelo usuário",
+      "sourceStatus": "Caderno completo importado e gabarito final conferido; resoluções fixas em revisão",
       "subjects": [
         {"name":"Português","count":10},
         {"name":"Inglês","count":10},
-        {"name":"Engenharia Elétrica","count":28},
-        {"name":"Engenharia Eletrônica","count":19},
-        {"name":"Matemática","count":2},
-        {"name":"Engenharia Mecânica","count":1}
+        {"name":"Máquinas Elétricas","count":8},
+        {"name":"Linhas e Instalações Elétricas","count":7},
+        {"name":"Proteção e Sistemas Elétricos de Potência","count":4},
+        {"name":"Circuitos e Medidas Elétricas","count":10},
+        {"name":"Controle e Sinais","count":11},
+        {"name":"Física e Matemática","count":6},
+        {"name":"Eletrônica","count":4}
       ]
     }
   ]
