@@ -32,10 +32,15 @@ export async function loadExamCatalog() {
 
 export async function loadPassages() {
   if (passageCache) return passageCache;
-  const response = await fetch('/data/passages.json');
-  if (!response.ok) return [];
-  const data = await response.json();
-  passageCache = data.passages ?? [];
+
+  const sources = ['/data/passages.json', '/data/passages-2018.json'];
+  const docs = await Promise.all(sources.map(async path => {
+    const response = await fetch(path);
+    if (!response.ok) return { passages: [] };
+    return response.json();
+  }));
+
+  passageCache = docs.flatMap(doc => doc.passages ?? []);
   return passageCache;
 }
 
