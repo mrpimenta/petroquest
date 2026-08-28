@@ -32,16 +32,6 @@ function buildGate() {
       box-shadow: 0 18px 60px rgba(20, 45, 35, .12);
       padding: 28px;
     }
-    .access-gate__card h1 {
-      margin: 0 0 8px;
-      font-size: 1.55rem;
-      color: #173f32;
-    }
-    .access-gate__card p {
-      margin: 0 0 20px;
-      color: #5c6d66;
-      line-height: 1.5;
-    }
     .access-gate__card label {
       display: block;
       margin-bottom: 8px;
@@ -79,8 +69,8 @@ function buildGate() {
     }
     .access-gate__error {
       min-height: 22px;
-      margin: 10px 0 0 !important;
-      color: #a12e2e !important;
+      margin: 10px 0 0;
+      color: #a12e2e;
       font-size: .92rem;
     }
     @media (max-width: 520px) {
@@ -95,14 +85,12 @@ function buildGate() {
   root.className = 'access-gate';
   root.innerHTML = `
     <form class="access-gate__card" autocomplete="off">
-      <h1>Petro Quest</h1>
-      <p>Área privada de estudos. Digite a senha para continuar.</p>
-      <label for="petroquest-password">Senha de acesso</label>
+      <label for="petroquest-password">Senha de acesso:</label>
       <div class="access-gate__row">
         <input id="petroquest-password" type="password" inputmode="text" autocomplete="current-password" required autofocus>
         <button type="submit">Entrar</button>
       </div>
-      <p class="access-gate__error" role="alert" aria-live="polite"></p>
+      <div class="access-gate__error" role="alert" aria-live="polite"></div>
     </form>
   `;
   document.body.appendChild(root);
